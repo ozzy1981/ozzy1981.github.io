@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contact Me</title>
+<meta charset="utf-8">
+<link href="css/mystyle.css" rel="stylesheet" type="text/css"/>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+
+<div class="header">
+  <h2>Josh Power</h2>
+</div>
+
+<div class="topnav">
+
+  <a href="index.html">Home</a>
+  <a href="bio.html">Biography</a>
+  <a href="experience.html">Work Experience</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="#">Forum</a>
+  <a href="timeline.html">Professional Timeline</a>
+  <a href="volunteering.html">Volunteering</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <div style="text-align:center">
+    <h2>Contact Me</h2>
+    <p>Swing by for a cup of coffee, or leave me a message:</p>
+	<p>* Indicates a required field</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div id="map" style="width:100%;height:500px"></div>
+    </div>
+    <div class="column">
+      <form name="myForm" action="/action_page.php" onsubmit="return validateForm();" method="post">
+        <label for="fname">First Name*</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+        <label for="email">Email*</label>
+        <input type="text" name="email" placeholder="Your email.."required>
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject">Subject*</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px" required></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+  <!-- Initialize Google Maps -->
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(-37.588694, 143.874449);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 12};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTJEzszuuAsa13nPDlhqim3zMBfAXkFw4&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+    </div>
+    
+  </div>
+  
+</div>
+</div>
+<div class="footer">
+<h3>Follow Me</h3>
+      <div class="nav3" style="height:auto;">
+		<a href="https://www.facebook.com/josh.a.power" target="_blank" class="icons"><img src="images/FB-f-Logo__blue_50.png" style="width: 35px; height: 35px;"></a>
+		<a href="https://twitter.com" target="_blank" class="icons"><img src="images/Twitter_Logo_Blue.png" alt="Twitter Logo" style="width: 35px; height: 35px;"></a>
+		<a href="https://www.instagram.com/ozzy21281/" target="_blank" class="icons"><img src="images/glyph-logo_May2016.png" alt="Instagram Logo" style="width: 35px; height: 35px;"></a>
+		<a href="https://www.playstation.com/en-us/my/profile/" target="_blank" class="icons"><img src="images/playstation logo.png" alt="Playstation Logo" style="width: 35px; height: 35px;"></a>
+		<a href="http://steamcommunity.com/id/powerfox1981/" target="_blank" class="icons"><img src="images/steam_logo___vector_by_theqz-d5trssi.png" alt="Steam Logo" style="width: 35px; height: 35px;"></a>
+	  </div>    
+  <h2>Copyright 2017 &copy Joshua Power</h2>
+
+
+</body>
+</html>

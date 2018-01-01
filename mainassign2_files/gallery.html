@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Gallery</title>
+<meta charset="utf-8">
+<link href="css/mystyle.css" rel="stylesheet" type="text/css"/>
+
+
+</head>
+<body>
+
+<div class="header">
+  <h2>Josh Power</h2>
+</div>
+
+<div class="topnav">
+
+  <a href="#">Home</a>
+  <a href="bio.html">Biography</a>
+  <a href="experience.html">Work Experience</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="forum.html">Forum</a>
+  <a href="timeline.html">Professional Timeline</a>
+  <a href="volunteering.html">Volunteering</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <!-- Trigger the Modal -->
+	<img class="myImg" src="images/award photo.jpg" alt="Fed Uni Awards Night" width="200" height="200">
+	<img class="myImg" src="images/Matilda and I thumb.jpg" alt="Day at the park with Tilly" width="200" height="200">
+	<img class="myImg" src="images/Shae and I.jpg" alt="Shae & I" width="200" height="200">
+	<img class="myImg" src="images/gender reveal party.jpg" alt="Matilda & I @ the Gender reveal party" width="200" height="200">
+	<img class="myImg" src="images/Robyn & I.jpg" alt="Robyn & I @ Gold Class Cinemas, Ballarat" width="200" height="200">
+	<img class="myImg" src="images/Myself in Swans gear.jpg" alt="Watching the Swans play on TV" width="200" height="200">
+	
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="img01">
+		<div id="caption"></div>
+	</div>
+
+	<script>
+	// Get the modal
+	var modal = document.getElementById('myModal');
+
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = $('.myImg');
+	var modalImg = $("#img01");
+	var captionText = document.getElementById("caption");
+	$('.myImg').click(function()
+	{
+		modal.style.display = "block";
+		var newSrc = this.src;
+		modalImg.attr('src', newSrc);
+		captionText.innerHTML = this.alt;
+	});
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function()
+	{ 
+    modal.style.display = "none";
+	}
+	</script>
+	</div>
+   </div>
+</div>
+<div class="footer">
+<h3>Follow Me</h3>
+      <div class="nav3" style="height:auto;">
+		<a href="https://www.facebook.com/josh.a.power" target="_blank" class="icons"><img src="images/FB-f-Logo__blue_50.png" style="width: 35px; height: 35px;"></a>
+		<a href="https://twitter.com" target="_blank" class="icons"><img src="images/Twitter_Logo_Blue.png" alt="Twitter Logo" style="width: 35px; height: 35px;"></a>
+		<a href="https://www.instagram.com/ozzy21281/" target="_blank" class="icons"><img src="images/glyph-logo_May2016.png" alt="Instagram Logo" style="width: 35px; height: 35px;"></a>
+		<a href="https://www.playstation.com/en-us/my/profile/" target="_blank" class="icons"><img src="images/playstation logo.png" alt="Playstation Logo" style="width: 35px; height: 35px;"></a>
+		<a href="http://steamcommunity.com/id/powerfox1981/" target="_blank" class="icons"><img src="images/steam_logo___vector_by_theqz-d5trssi.png" alt="Steam Logo" style="width: 35px; height: 35px;"></a>
+	  </div>  
+  <h2>Copyright &copy 2017 Joshua Power All Rights Reserved</h2>
+
+
+</body>
+</html>
